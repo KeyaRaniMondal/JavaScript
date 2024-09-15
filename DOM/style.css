@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(199, 243, 228);
+}
+
+h1{
+    color: blueviolet;
+}
+p{
+    font-size: medium;
+    letter-spacing: 2px ;
+}
