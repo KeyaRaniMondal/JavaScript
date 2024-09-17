@@ -16,3 +16,21 @@ purpleButton.addEventListener('click',function makePurple(){
 document.getElementById("golden-rod").addEventListener('click',function(){
     document.body.style.backgroundColor='goldenrod'
 })
+
+
+
+
+// More Events
+
+document.getElementById('btn-more').addEventListener('click',function(){
+    console.log("event tiggered")
+})
+
+document.getElementById("text-field").addEventListener('focus',function(){
+    console.log("event tiggered inside input field")
+})
+
+// keypress,keydown always shows one character less than typed currently and keyup shows exactly typed
+document.getElementById("text-field1").addEventListener('keydown',function(event){
+    console.log(event.target);
+})
