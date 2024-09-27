@@ -10,3 +10,9 @@ EX:  alert("Hello!")
 
 difference between console.log and console.dir
 the console.log() returns the object in its string representation and console.dir() recognizes the object just as an object and outputs its properties. Both log() and dir() returns the string just as a string.
+
+
+
+Optional Chaining:checked using ? 
+
+console.log(user.address.street?.second)
