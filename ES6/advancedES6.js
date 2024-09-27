@@ -99,9 +99,72 @@ console.log(selected)
 
 //--------------------------------------------------------- Find --------------------------------------------------------------------------------
 
-//find selects elements based on a condition and returns an array with the elements that fulfilled the condition and if the value is not present than it returns undefined
+//find selects elements based on a condition and returns an array with the first element that fulfilled the condition and if the value is not present than it returns undefined
 
 const players=[20,478,468,80,90,60]
 const selectes=player.filter(p=>p>80)
 console.log(selectes)
 
+
+
+
+//------------------------------------------------------- Reduce -------------------------------------------------------------------
+
+const array=[3,4,6,7,8,9]
+const total=array.reduce((previous,current)=>previous+current,0)
+console.log(total)//prints total sum of the array
+
+
+
+
+//----------------------------------------------practice--------------------------------------------------
+
+const Products=[
+    {id:1, name:'lenovo',price:65000},
+    {id:2, name:'dell',price:45000},
+    {id:3, name:'hp',price:4000},
+    {id:4, name:'mac',price:165000},
+]
+const names=Products.map(Products=>Products.name)
+console.log(names)
+
+Products.forEach(p=>console.log(p.id))
+
+const expensive=Products.filter(p=>p.price>50000)
+console.log(expensive)
+
+const affordable=Products.find(p=>p.price<50000)
+console.log(affordable)
+
+const totalPrice=Products.reduce((accum,current)=>accum+current.price,0)
+console.log(totalPrice)
+
+
+
+
+
+
+
+//----------------------------------------------- inheritance in class ------------------------------------------------------
+//Inheritance works by prototype chain
+
+class Vehicle{
+    constructor(name,price){
+        this.name=name;
+        this.price=price;
+    }
+    move(){
+        console.log('staeting...........');
+    }
+}
+
+class Bus extends Vehicle{
+    constructor(name,price,seat,ticketPrice){
+        super(name,price);//used to take properties from parent class
+        this.seat=seat;
+        this.ticketPrice=ticketPrice;
+    }
+}
+
+let bus=new Bus('Express JS',50000,'a',1000)//new keyword is used to create object from class
+console.log(bus)
